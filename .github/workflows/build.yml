@@ -2,7 +2,7 @@
 
 on:
   push:
-    tags: v*
+    # tags: v*
 
 jobs:
   build_lib:

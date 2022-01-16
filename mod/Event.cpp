@@ -594,7 +594,7 @@ THook(bool, "?attack@Player@@UEAA_NAEAVActor@@AEBW4ActorDamageCause@@@Z",
 //切换纬度
 THook(bool, "?_playerChangeDimension@Level@@AEAA_NPEAVPlayer@@AEAVChangeDimensionRequest@@@Z",
 	uintptr_t _this, Player* p, uintptr_t req) {
-	Callbacker h(EventCode::onChangeDimension);
+	Callbacker h(EventCode::onChangeDim);
 	bool result = original(_this, p, req);
 	if (result) {
 		h.setArg(ToEntity(p)).call();
