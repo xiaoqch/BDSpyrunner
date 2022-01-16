@@ -57,10 +57,10 @@ jobs:
         working-directory: ${{env.GITHUB_WORKSPACE}}
         run: msbuild /m /p:Configuration=Release ./
 
-      - name: GH Release
-        uses: softprops/action-gh-release@v0.1.14
-        with:
-          files: |
-            ./x64/Release/BDSpyrunner.dll
-            ./x64/Release/BDSpyrunner.pdb
+      # - name: GH Release
+      #   uses: softprops/action-gh-release@v0.1.14
+      #   with:
+      #     files: |
+      #       ./x64/Release/BDSpyrunner.dll
+      #       ./x64/Release/BDSpyrunner.pdb
 
